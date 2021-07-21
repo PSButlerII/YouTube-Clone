@@ -5,4 +5,4 @@ class Comment(models.Model):
     dislikes = models.IntegerField(default=0)
     video_id = models.CharField(max_length=None)
     previous_comment = models.ForeignKey('comment.Comment', default=0, on_delete=models.PROTECT)
-    comment = models.CharField(max_length=None)
+    new_comment = models.CharField(max_length=None)
