@@ -13,7 +13,7 @@ class CommentList(APIView):
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = CommentSerializer(data=request.data, partial=True)
+        serializer = CommentSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
